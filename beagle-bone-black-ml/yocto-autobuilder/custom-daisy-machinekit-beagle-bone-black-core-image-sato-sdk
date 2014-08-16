@@ -1,0 +1,21 @@
+[custom-daisy-machinekit-beagle-bone-black-core-image-sato-sdk]
+builders: 'builder1'
+repos: [{'poky':
+            {'repourl':'git://git.yoctoproject.org/poky',
+                'layerversion':{'core':'meta', 'yoctobsp':'meta-yocto-bsp'},
+             'branch':'daisy'}},
+        {'meta-machinekit':
+            {'repourl':'git://github.com/RobertBerger/meta-machinekit',
+             'branch':'master'}},
+        {'meta-machinekit-bsp':
+            {'repourl':'git://github.com/RobertBerger/meta-machinekit-bsp',
+             'branch':'master'}}]
+
+steps: [{'SetDest':{}},
+        {'CheckOutLayers': {}},
+        {'RunPreamble': {}},
+        {'GetDistroVersion' : {'distro': 'poky'}},
+        {'CreateAutoConf': {'machine': 'beagle-bone-black-ml', 'SDKMACHINE' : 'x86_64', 'distro': 'poky', 'buildhistory' : True, 'packages': 'ipk'}},
+        {'CreateBBLayersConf': {'buildprovider' : 'yocto', 'layerdirs': ['meta-machinekit', 'meta-machinekit-bsp/beagle-bone-black-ml']}},        
+        {'BuildImages': {'images': 'core-image-sato-sdk'}},
+        {'PublishArtifacts': {'artifacts': ['beagle-bone-black-ml', 'md5sums']}}]
