@@ -718,3 +718,5 @@ patch patches/sgx/0001-OpenGl-added-SGX-device-to-device-tree.patch
 patch patches/sgx/0002-OpenGL-apply-SGX-patch-from-TI-forum-FIXES-crash-aft.patch
 patch patches/sgx/0003-OpenGL-fixed-IRQ-offset.patch
 patch patches/backports/0001-backport-v3.13.7-tpm_i2c_atmel.c.patch
+patch patches/xenomai/0001-Fix-relocation-truncated-to-fit-R_ARM_THM_JUMP19-err.patch
+patch patches/xenomai/0002-arm-remove-reference-to-mach-timex.h-in-arch-arm-inc.patch

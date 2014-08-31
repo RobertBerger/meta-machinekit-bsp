@@ -727,3 +727,10 @@ patch patches/sgx/0002-OpenGL-apply-SGX-patch-from-TI-forum-FIXES-crash-aft.patc
 patch patches/sgx/0003-OpenGL-fixed-IRQ-offset.patch
 patch patches/backports/0001-backport-v3.13.7-tpm_i2c_atmel.c.patch
 # Xenomai follows here
+patch patches/xenomai/patches-from-xenomai/beaglebone/ipipe-core-3.8.13-beaglebone-pre.patch
+patch patches/xenomai/patches-from-xenomai/ipipe-core-3.8.13-arm-3.patch
+patch patches/xenomai/patches-from-xenomai/beaglebone/ipipe-core-3.8.13-beaglebone-post.patch
+patch patches/xenomai/0001-Fix-relocation-truncated-to-fit-R_ARM_THM_JUMP19-err.patch
+patch patches/xenomai/patches-from-xenomai/xenomai-the-lot.patch
+patch patches/xenomai/0002-arm-remove-reference-to-mach-timex.h-in-arch-arm-inc.patch
+
